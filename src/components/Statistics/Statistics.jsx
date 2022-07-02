@@ -1,26 +1,21 @@
 import PropTypes from "prop-types";
-export const Statistics = ({ data }) => {
+
+function Statistics({ total, percentage, options: { good, neutral, bad } }) {
   return (
-    <>
-      <p>
-        Good:<span>{data.Good}</span>
-      </p>
-      <p>
-        Neutral:<span>{data.Neutral}</span>
-      </p>
-      <p>
-        Bad:<span>{data.Bad}</span>
-      </p>
-      <p>
-        Total:<span>{data.total}</span>
-      </p>
-      <p>
-        Positive feedback:
-        <span>{Number(data.positive.toFixed())}% </span>
-      </p>
-    </>
+    <div>
+      <p>Good: {good}</p>
+      <p>Neutral: {neutral}</p>
+      <p>Bad: {bad}</p>
+      <p>Total: {total}</p>
+      <p>Positive Feedback: {percentage}</p>
+    </div>
   );
-};
+}
+
 Statistics.propTypes = {
-  data: PropTypes.object,
+  total: PropTypes.number.isRequired,
+  percentage: PropTypes.number.isRequired,
+  options: PropTypes.objectOf(PropTypes.number.isRequired).isRequired,
 };
+
+export default Statistics;

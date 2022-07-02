@@ -14,7 +14,7 @@ export const Container = styled.div`
   padding: 40px;
 `;
 
-export const TitleStatics = styled.div`
+export const TitleStatics = styled.section`
   text-align: center;
   margin-top: 10px;
   font-size: 16px;
