@@ -57,9 +57,11 @@ class Counter extends Component {
         ) : (
           <Section title={"Statistics"}>
             <Statistics
-              options={this.state}
+              good={this.state.good}
+              neutral={this.state.neutral}
+              bad={this.state.bad}
               total={total}
-              percentage={percentage}
+              positivePercentage={percentage}
             />
           </Section>
         )}
