@@ -7,7 +7,7 @@ function Statistics({ total, positivePercentage, good, neutral, bad }) {
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
       <p>Total: {total}</p>
-      <p>Positive Feedback: {positivePercentage}</p>
+      <p>Positive Feedback: {positivePercentage}%</p>
     </div>
   );
 }

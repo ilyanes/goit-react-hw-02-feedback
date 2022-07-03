@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Container } from "../../App.styled";
-import { Buttons } from "../Buttons/Buttons";
+import { FeedbackOptions } from "../FeedbackOptions/FeedbackOptions";
 import Notification from "../Notification/Notification";
 import Section from "../Section/Section";
 import Statistics from "../Statistics/Statistics";
@@ -46,10 +46,10 @@ class Counter extends Component {
     return (
       <Container>
         <Section title={"Please leave feedback"}>
-          <Buttons
-            buttons={["good", "neutral", "bad"]}
-            onClick={this.handleClick}
-          ></Buttons>
+          <FeedbackOptions
+            options={["good", "neutral", "bad"]}
+            onLeaveFeedback={this.handleClick}
+          ></FeedbackOptions>
         </Section>
 
         {total === 0 ? (
