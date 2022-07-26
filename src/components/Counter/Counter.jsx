@@ -16,9 +16,6 @@ class Counter extends Component {
     bad: this.props.initialValue,
   };
 
-  //   allButtons = Object.keys(this.state);
-  //   staticData = {};
-
   handleClick = (e) => {
     const { name } = e.target;
     this.setState((prevState) => ({
